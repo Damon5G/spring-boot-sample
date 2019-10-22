@@ -1,5 +1,6 @@
 package com.damon.boot;
 
+import org.springframework.boot.Banner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -7,7 +8,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SpringBootBannerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringBootBannerApplication.class, args);
+        SpringApplication springApplication = new SpringApplication(SpringBootBannerApplication.class);
+        springApplication.setBannerMode(Banner.Mode.OFF);
+        springApplication.run(args);
+        //SpringApplication.run(SpringBootBannerApplication.class, args);
     }
 
 }
